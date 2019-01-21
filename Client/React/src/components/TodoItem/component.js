@@ -75,6 +75,7 @@ class TodoItem extends Component {
     render() {
         return (
             <div className="item-container">
+            <h1>I am here!!!</h1>
                 <div className="completed-check-box" onClick={this.handleCheck}>
                     {this.renderCheckIcon()}
                 </div>

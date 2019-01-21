@@ -13,7 +13,8 @@ class Todo extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addItem(this.props.token, {title: this.input.value.trim()});
-        this.input.value = ''
+        this.input.value = '';
+        
     }
 
     renderTodos = () => {
@@ -44,9 +45,13 @@ class Todo extends Component {
                                 autoComplete="off"
                                 ref={input => {this.input = input}}
                                 placeholder="Add a todo..."/>
+
+                             <button type="submit" >Submit</button>
                         </div>
                     </form>
                     <div className="todo-container">
+                    <h1>Todo List</h1>
+                    <TodoItem></TodoItem>
                         {this.renderTodos()}
                     </div>
                     </div>

@@ -1,7 +1,10 @@
-export const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN;
-export const AUTH0_CLIENT_ID = process.env.AUTH0_CLIENT_ID;
-export const AUTH0_CLIENT_SECRET = process.env.AUTH0_CLIENT_SECRET;
-export const AUTH0_API_AUDIENCE = process.env.AUTH0_API_AUDIENCE;
+export const AUTH0_DOMAIN = "newappnikodanjaime.auth0.com";
+export const AUTH0_CLIENT_ID = "cOqLc1TxHSLNlWrBS0blJVUyaKo4XfEZ";
+export const AUTH0_CLIENT_SECRET =
+  fVRFQa0WjOcr433iDMgBn3YfOU05 - W6camw6PdWdxwe19i1HIEsWtzCDICWsM7sE;
+export const AUTH0_API_AUDIENCE =
+  "https://newappnikodanjaime.auth0.com/api/v2/";
 
 //App server
-export const APP_SERVER_URL = process.env.REACT_APP_APP_SERVER_URL || 'http://localhost:8080';
+export const APP_SERVER_URL =
+  process.env.REACT_APP_APP_SERVER_URL || "http://localhost:8080";
