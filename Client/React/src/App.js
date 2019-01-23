@@ -48,13 +48,13 @@ class App extends Component {
               <li><NavLink to="/profile">Profile</NavLink></li>
               <div className="btn-group-right">
                 <a href={ELECTRON_APP_MAC_DOWNLOAD_URL}>
-                  <button class="download-btn mac-download">
+                  <button className="download-btn mac-download">
                     <i className="fas fa-download"></i>
                     Mac
                   </button>
                 </a>
                 <a href={ELECTRON_APP_WIN_DOWNLOAD_URL}>
-                  <button class="download-btn win-download">
+                  <button className="download-btn win-download">
                     <i className="fas fa-download"></i>
                     Windows
                   </button>
@@ -76,7 +76,9 @@ class App extends Component {
                 <a href="https://github.com/by12380" target="_blank">Built by @by12380</a></li>
               <li>
                 <a href="https://github.com/by12380/react-todo-universal" target="_blank">
-                  <i class="fab fa-github"></i>
+                  <i className="fab fa-github"></i>
+                  <i className="fab fa-github"></i>
+                  <i className="fab fa-github"></i>
                   Source code
                 </a>
               </li>
@@ -92,7 +94,7 @@ class App extends Component {
       this.props.socketConnected
       && this.props.user_id
       && !this.props.roomJoined ) {
-        socket.emit('room', this.props.user_id);
+        socket.emit('create', "room1");
         this.props.joinRoomSuccess();
     }
   }

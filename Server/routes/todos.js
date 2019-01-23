@@ -11,7 +11,7 @@ router.get('/', checkJwt, async function(req, res){
     const user_id = req.user.sub;
 
     try {
-        const todos = await Todo.find({user_id});
+        const todos = await Todo.find({});
         res.status(200).json(todos);
     }
     catch(e)

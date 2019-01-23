@@ -22,7 +22,8 @@ class TodoItem extends Component {
             this.props.token, 
             {
                 _id: this.props.id,
-                title: this.input.value.trim()
+                title: this.input.value.trim(),
+                // username: this.props.name
             }
         )
 
@@ -36,7 +37,8 @@ class TodoItem extends Component {
             this.props.token, 
             {
                 _id: this.props.id,
-                completed: !this.props.completed
+                completed: !this.props.completed,
+                // username:this.props.name
             }
         )
 
@@ -50,6 +52,7 @@ class TodoItem extends Component {
     }
 
     renderTitle = () => {
+        console.log("=-=-=--==-",this.props)
         return this.state.isEdit
             ?   <input
                     ref={input => this.input = input}
@@ -73,13 +76,15 @@ class TodoItem extends Component {
     }
 
     render() {
+        // console.log(this.props,"zxczxczxcxzc")
         return (
-            <div className="item-container">
-            <h1>I am here!!!</h1>
+            <div className="">
+            
                 <div className="completed-check-box" onClick={this.handleCheck}>
                     {this.renderCheckIcon()}
                 </div>
                 <div className="title-container">
+                    <h6>User :{this.props.user} said :</h6>
                     {this.renderTitle()}
                 </div>
                 <div className="delete-btn" onClick={this.handleDelete}>

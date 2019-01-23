@@ -3,9 +3,13 @@ import { logOut } from '../../utils/auth0';
 import './Profile.css';
 
 class Profile extends Component {
+    // state={
+    //     profileUser: this.props.profile.nickname
+    // }
 
     componentDidMount() {
         this.props.fetchUser(this.props.token)
+        // this.state.profileUser
     }
 
     onLogOut = () => {
@@ -13,7 +17,12 @@ class Profile extends Component {
         logOut();
     }
 
+    profileFinder = () =>{
+        return this.props.profile.nickname
+    }
+
     render() {
+        // console.log(this.state,"this is profile!")
         return (
             <div>
                 { this.props.profile.picture
@@ -21,7 +30,7 @@ class Profile extends Component {
                 : null }
                 
                 { this.props.profile.name
-                ? <p>Welcome, {this.props.profile.name}</p>
+                ? <p>Welcome, {this.props.profile.nickname}</p>
                 : null }
 
                 <button className='logout-btn' onClick={this.onLogOut}>Logout</button>

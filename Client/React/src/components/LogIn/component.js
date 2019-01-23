@@ -21,7 +21,7 @@ class LogIn extends Component {
     render() {
         return (
             <div>
-                <h1 class="site-header">Todos</h1>
+                <h1 className="site-header">Todos</h1>
                 <p className="app-description">
                     Universal, cross platform todos app built from <a href={REACT_UNIVERSAL_REPO_URL} target="_blank">React Universal</a> starter kit
                 </p>
